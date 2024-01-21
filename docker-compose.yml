@@ -14,7 +14,7 @@ services:
       resources:
         limits:
           cpus: '0.6'
-  nodejs:
+  nodejs_react:
     build:
       context: .
       dockerfile: Dockerfile_node
@@ -25,7 +25,7 @@ services:
       - /app/node_modules
     networks:
       - react
-  nginx:
+  nginx_react:
     image: nginx:latest
     ports:
       - "169:169"
@@ -33,10 +33,10 @@ services:
       - ./nginx.conf:/etc/nginx/nginx.conf
     depends_on:
       - step_up_web
-      - nodejs
+      - nodejs_react
   duckdns_react:
     image: linuxserver/duckdns
-    container_name: duckdns
+    container_name: duckdns_react
     environment:
       - SUBDOMAINS=step-up-kh.duckdns.org
       - TOKEN=2fa0c36d-66a5-4242-acfa-d1cfcd1227c3
