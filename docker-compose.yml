@@ -8,11 +8,11 @@ services:
     ports:
       - '169:169'
     networks:
-      - laravel
+      - react
     deploy:
       resources:
         limits:
           cpus: '0.6'
-# networks:
-#   laravel:
-#     external: true
+networks:
+  react:
+    driver: bridge
