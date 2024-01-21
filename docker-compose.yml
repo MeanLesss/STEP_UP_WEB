@@ -7,8 +7,6 @@ services:
       dockerfile: Dockerfile
     ports:
       - '169:169'
-    depends_on:
-      - step_up_app
     networks:
       - laravel
     deploy:
