@@ -13,6 +13,6 @@ services:
       resources:
         limits:
           cpus: '0.6'
-networks:
-  laravel:
-    external: true
+# networks:
+#   laravel:
+#     external: true
