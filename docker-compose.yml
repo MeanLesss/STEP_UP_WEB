@@ -17,7 +17,7 @@ services:
   nodejs:
     build:
       context: .
-      dockerfile: Dockerfile_Node
+      dockerfile: Dockerfile_node
     ports:
       - "3000:3000"
     volumes:
