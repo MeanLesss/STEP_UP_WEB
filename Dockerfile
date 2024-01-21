@@ -9,7 +9,7 @@ WORKDIR /app
 COPY ./package*.json ./
 
 # Install any needed packages specified in package.json
-RUN npm install
+RUN npm install --force
 
 # Bundle app source
 COPY . .
@@ -23,7 +23,7 @@ FROM nginx:alpine
 # Copy the build directory from the build stage to the nginx html directory
 COPY --from=build /app/build /usr/share/nginx/html
 
-# Expose port 80
+# Expose port 169
 EXPOSE 169
 
 # Start nginx
