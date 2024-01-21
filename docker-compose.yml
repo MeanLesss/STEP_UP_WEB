@@ -9,6 +9,10 @@ services:
       - '169:169'
     networks:
       - react
+    volumes:
+      - ./app:/app
+    # environment:
+      # - NODE_ENV=production
     deploy:
       resources:
         limits:
