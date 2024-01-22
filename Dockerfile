@@ -7,6 +7,6 @@ RUN npm run build
 
 # Production stage
 FROM nginx:alpine
-EXPOSE 80
+EXPOSE 169
 COPY ./nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /usr/app/dist /usr/share/nginx/html
