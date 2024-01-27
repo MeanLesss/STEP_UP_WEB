@@ -7,8 +7,8 @@ FROM node:20.9.0 as build
 # COPY package*.json ./
 
 WORKDIR /usr/app
-RUN npm ci --force
 COPY . /usr/app
+RUN npm ci --force
 ENV NODE_OPTIONS=--max_old_space_size=2048
 RUN npm run build
 # Production stage
