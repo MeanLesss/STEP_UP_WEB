@@ -12,7 +12,7 @@ export const getUser = async(userToken) => {
     redirect: 'follow'
   };
 
-  return fetch(`${HOST}/api/user`, requestOptions)
+  return fetch(`http://step-up-kh.duckdns.org:168/api/user`, requestOptions)
   .then(response => response.json())
   .then(result =>  {console.log(result); return result })
   .catch(error => console.log('error', error));
@@ -39,7 +39,7 @@ export const ViewAllService = async ({ userToken }) => { // Destructure userToke
     redirect: 'follow'
   };
 
-  return fetch(`${HOST}/api/service/data`, requestOptions)
+  return fetch(`http://step-up-kh.duckdns.org:168/api/service/data`, requestOptions)
     .then(response => response.json())
     .then(result =>  {console.log(result); return result })
     .catch(error => console.log('error', error));
