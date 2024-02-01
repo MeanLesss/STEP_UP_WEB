@@ -11,7 +11,7 @@ FROM node:20.9.0 as build
 # RUN npm run build
 # COPY package*.json ./
 
-WORKDIR /usr/share/nginx/html
+WORKDIR /usr/app
 COPY . /usr/app
 RUN npm ci --force
 # Set environment variables
