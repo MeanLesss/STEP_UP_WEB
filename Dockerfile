@@ -15,7 +15,7 @@ WORKDIR /usr/app
 COPY . /usr/app
 RUN npm ci --force
 # Set environment variables
-ENV NODE_OPTIONS=--max_old_space_size=2048
+ENV NODE_OPTIONS=--max_old_space_size=3052
 ENV API_HOST='http://step-up-kh.duckdns.org:168'
 
 

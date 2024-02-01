@@ -6,9 +6,6 @@ services:
       dockerfile: Dockerfile
     # volumes:
     #   - ./dist:/usr/share/nginx/html
-    environment:
-      - NODE_OPTIONS=--max_old_space_size=2048
-      - API_HOST=http://step-up-kh.duckdns.org:168
     image: step_up_web   
     container_name: step_up_web
     restart: unless-stopped 
