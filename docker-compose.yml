@@ -2,7 +2,7 @@ version: '3.8'
 services:
   step_up_web:
     build:
-      context: .
+      # context: .
       dockerfile: Dockerfile
     # volumes:
     #   - ./dist:/usr/share/nginx/html
