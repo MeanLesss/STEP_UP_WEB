@@ -13,8 +13,7 @@ services:
     container_name: step_up_web
     restart: unless-stopped 
     ports:
-      - "8000:8000"
-    working_dir: /usr/share/nginx/html
+      - "8000:8000" 
     deploy:
       resources:
         limits:
