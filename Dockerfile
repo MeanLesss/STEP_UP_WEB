@@ -10,7 +10,7 @@ FROM node:20.9.0 as build
 # RUN npm ci --force
 # RUN npm run build
 # COPY package*.json ./
-
+EXPOSE 8000
 WORKDIR /usr/app
 COPY . /usr/app 
 RUN npm i --force
