@@ -18,7 +18,6 @@ RUN npm i --force
 ENV NODE_OPTIONS=--max_old_space_size=3052
 ENV API_HOST='http://step-up-kh.duckdns.org:168'
 
-
 RUN npm run build
 # Production stage
 FROM nginx:alpine
