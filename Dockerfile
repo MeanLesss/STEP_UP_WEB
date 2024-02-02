@@ -24,4 +24,7 @@ RUN npm run build
 FROM nginx:alpine
 EXPOSE 169
 COPY ./nginx/conf.d/default_react.conf /etc/nginx/conf.d/default_react.conf
-COPY --from=build /usr/app/dist/build /usr/share/nginx/html
+# COPY --from=build /usr/app/dist/build /usr/share/nginx/html
+COPY --from=build /usr/app/build /usr/share/nginx/html
+
+
