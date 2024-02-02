@@ -14,7 +14,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.6'
+          cpus: '0.6' 
 
   nginx_react:
     image: nginx:alpine
@@ -27,3 +27,4 @@ services:
 networks:
   react:
     driver: bridge
+

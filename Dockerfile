@@ -13,7 +13,7 @@ FROM node:20.9.0 as build
 
 WORKDIR /usr/app
 COPY . /usr/app
-RUN npm ci --force
+RUN npm i --force
 # Set environment variables
 ENV NODE_OPTIONS=--max_old_space_size=3052
 ENV API_HOST='http://step-up-kh.duckdns.org:168'
